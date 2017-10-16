@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="">
+    <style>
+        li {
+            background: lightblue;
+            font-size: 3em;
+
+        }
+
+        .stuff {
+            text-decoration: line-through;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <ul>
+        <li>Red</li>
+        <li>Green</li>
+        <li>Blue</li>
+    </ul>
+
+    <script>
+        let myElements = document.querySelectorAll("li");
+        console.log(myElements);
+
+        myElements.forEach(addClass);
+
+        function addClass(oneLi, index) {
+            console.log(oneLi);
+            /* oneLi.classList.add("stuff")*/
+            oneLi.addEventListener('click', listClicked);
+        }
+
+        function listClicked(evt) {
+            console.log(evt.target);
+            evt.target.classList.toggle("stuff");
+
+        }
+
+    </script>
+</body>
+
+</html>
